@@ -15,6 +15,7 @@ namespace PotatoAlert
             var jsonResponse = await FetchWFWorldState();
             Console.WriteLine(jsonResponse);
             WFJsonParser.GetAlerts(jsonResponse);
+            NotificationManager.DisplayAlertNotification(new Deserialize.Alert());
         }
 
         private static async Task<string> FetchWFWorldState()
