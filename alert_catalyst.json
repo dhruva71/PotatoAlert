@@ -1,0 +1,40 @@
+﻿[
+  {
+    "_id": {
+      "$oid": "611ab7e6dca89d12db0c527f"
+    },
+    "Activation": {
+      "$date": {
+        "$numberLong": "1629482400000"
+      }
+    },
+    "Expiry": {
+      "$date": {
+        "$numberLong": "1629741600000"
+      }
+    },
+    "MissionInfo": {
+      "location": "SolNode711",
+      "missionType": "MT_SURVIVAL",
+      "faction": "FC_INFESTATION",
+      "difficulty": 1,
+      "missionReward": {
+        "credits": 10000,
+        "countedItems": [
+          {
+            "ItemType": "/Lotus/Types/Items/MiscItems/OrokinCatalyst",
+            "ItemCount": 1
+          }
+        ]
+      },
+      "levelOverride": "/Lotus/Levels/Proc/Orokin/OrokinTowerDerelictSurvivalRaid",
+      "enemySpec": "/Lotus/Types/Game/EnemySpecs/InfestedSurvivalB",
+      "minEnemyLevel": 20,
+      "maxEnemyLevel": 30,
+      "descText": "/Lotus/Language/Alerts/LotusGiftDesc",
+      "maxWaveNum": 10
+    },
+    "Tag": "LotusGift",
+    "ForceUnlock": true
+  }
+]

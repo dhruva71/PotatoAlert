@@ -2,7 +2,7 @@
 using System.Text.Json.Nodes;
 using PotatoAlert.Deserialize;
 
-namespace PotatoAlert;
+namespace PotatoAlert.Parser;
 
 internal class WFJsonParser
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 //{
 //    "_id": {
@@ -42,7 +38,7 @@ using System.Threading.Tasks;
 
 namespace PotatoAlert.Deserialize
 {
-    internal class Alert
+    public class Alert
     {
         public string? Tag { get; set; }
     }

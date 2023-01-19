@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using PotatoAlert.Deserialize;
+using PotatoAlert.Parser;
 
 namespace PotatoAlert;
 
@@ -23,7 +24,7 @@ internal class TestFromFile
             Console.WriteLine("Warframe json file not found!");
         }
     }
-        
+
     private void TestAlertFromJsonString()
     {
         var jsonAlert = @"
@@ -62,11 +63,19 @@ internal class TestFromFile
                 ""Tag"": ""LotusGift"",
                 ""ForceUnlock"": true
             }";
-        var alert = JsonSerializer.Deserialize<Alert>(jsonAlert);
+        var alert = JsonSerializer.Deserialize<PotatoAlert.Deserialize.Alert>(jsonAlert);
         if (alert != null)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(alert.Tag);
+            if (alert.Tag == "LotusGift")
+            {
+                //Assert.Pass();
+                return;
+            }
+        }
+        else
+        {
+            //Assert.Fail();
         }
     }
 }
