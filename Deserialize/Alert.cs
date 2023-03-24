@@ -41,11 +41,17 @@ namespace PotatoAlert.Deserialize
     public class Alert
     {
         public string? Tag { get; set; }
+        public MissionInfo? MissionInfo { get; set; }
     }
 
-    internal class MissionInfo
+    public class MissionInfo
     {
         public string? location;
         public string? missionType;
+        public string? faction;
+        public int difficulty;
+        public MissionReward? missionReward;
+        public int minEnemyLevel;
+        public int maxEnemyLevel;
     }
 }

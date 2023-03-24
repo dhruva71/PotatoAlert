@@ -6,7 +6,7 @@ namespace PotatoAlert.Parser;
 
 internal class WFJsonParser
 {
-    public static void GetAlerts(string content)
+    public static List<Alert> GetAlerts(string content)
     {
         var worldState = JsonNode.Parse(content);
         var jsonAlerts = worldState!["Alerts"]!;
@@ -30,5 +30,7 @@ internal class WFJsonParser
         {
             Console.WriteLine("Alerts is null!");
         }
+
+        return alerts;
     }
 }

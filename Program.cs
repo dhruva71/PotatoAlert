@@ -14,10 +14,16 @@ namespace PotatoAlert
             Console.WriteLine("PotatoAlert");
 
             var jsonResponse = await FetchWFWorldState();
-            WFJsonParser.GetAlerts(jsonResponse);
-            
-            // dummy alert
-            NotificationManager.DisplayAlertNotification(new Deserialize.Alert());
+            var alerts = WFJsonParser.GetAlerts(jsonResponse);
+
+            // check if there are any alerts with the tag "GiftOfTheLotus"
+            foreach ( var alert in alerts )
+            {
+                if (alert.Tag == "GiftOfTheLotus")
+                {
+                    NotificationManager.DisplayAlertNotification(alert);
+                }
+            }            
         }
 
         private static async Task<string> FetchWFWorldState()
